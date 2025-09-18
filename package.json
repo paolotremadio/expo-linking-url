@@ -9,7 +9,6 @@
     "install:ios": "open -a Simulator; xcrun simctl bootstatus booted -b; rm -rf .sim-app && mkdir -p .sim-app && tar -xzf ios.tar.gz -C .sim-app && APP=$(find .sim-app -type d -name '*.app' | head -n 1) && [ -n \"$APP\" ] && xcrun simctl install booted \"$APP\" && echo Installed: $APP"
   },
   "dependencies": {
-    "eas-cli": "^16.19.3",
     "expo": "~53.0.22",
     "expo-asset": "~11.1.7",
     "expo-constants": "~17.1.7",

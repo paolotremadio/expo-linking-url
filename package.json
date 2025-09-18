@@ -1,0 +1,29 @@
+{
+  "name": "expo-linking-url",
+  "version": "1.0.0",
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start",
+    "ios": "expo start --ios",
+    "build:ios": "eas build -p ios --profile ios-simulator --local --output ios.tar.gz",
+    "install:ios": "open -a Simulator; xcrun simctl bootstatus booted -b; rm -rf .sim-app && mkdir -p .sim-app && tar -xzf ios.tar.gz -C .sim-app && APP=$(find .sim-app -type d -name '*.app' | head -n 1) && [ -n \"$APP\" ] && xcrun simctl install booted \"$APP\" && echo Installed: $APP"
+  },
+  "dependencies": {
+    "eas-cli": "^16.19.3",
+    "expo": "~53.0.22",
+    "expo-asset": "~11.1.7",
+    "expo-constants": "~17.1.7",
+    "expo-dev-client": "~5.2.4",
+    "expo-linking": "~7.1.7",
+    "expo-router": "~5.1.6",
+    "expo-status-bar": "~2.2.3",
+    "react": "19.0.0",
+    "react-native": "0.79.5",
+    "react-native-safe-area-context": "5.4.0",
+    "react-native-screens": "~4.11.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0"
+  },
+  "private": true
+}

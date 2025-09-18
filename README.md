@@ -9,6 +9,6 @@ Steps to reproduce:
 - The app is on `landing` screen
 - Press `Reload`, the app stays on `landing`
 
-In Expo SDK 52, reloading the app was resetting the initial URL, opening the app on `index`. On Expo SDK 53, the initial url is not reset, causing the app to always open on `landing`.
+In Expo SDK 52, reloading the app was resetting the initial URL, opening the app on `index`. On Expo SDK 53, the initial url does not reset, causing the app to always open on `landing`.
 
 Reloading the app (via `location.reload` or via Expo Updates `Updates.reloadAsync`) is really useful after logout to clear the in-memory state of React app.
